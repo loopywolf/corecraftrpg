@@ -38,4 +38,17 @@ public class playerController : MonoBehaviour {
 
     }//Update
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        SpriteRenderer sr = other.GetComponent<SpriteRenderer>();
+        if(sr!=null)
+        {
+            if(sr.sortingLayerName=="powerups")
+            {
+                Debug.Log("picked up object");
+                Destroy(other.gameObject);
+            }
+        }
+    }//OnTriggerEnter
+
 }//class
