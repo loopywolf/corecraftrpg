@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 2477011251
+    locked: 0
+  - name: powerups
+    uniqueID: 3208168193
+    locked: 0
+  - name: player
+    uniqueID: 3919797839
+    locked: 0

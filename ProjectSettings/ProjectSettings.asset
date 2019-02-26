@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 06567af786735b34b96be543c887f6bf
+  productGUID: 70d03fd88463a7f43a600b3d89cfaa46
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: corecraftrpg2
+  productName: CoreCraftRpg
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -52,7 +52,6 @@ PlayerSettings:
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
-  tizenShowActivityIndicatorOnLoading: -1
   iosAppInBackgroundBehavior: 0
   displayResolutionDialog: 1
   iosAllowHTTPDownload: 1
@@ -67,7 +66,7 @@ PlayerSettings:
   androidBlitType: 0
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -111,13 +110,15 @@ PlayerSettings:
   videoMemoryForVertexBuffers: 0
   psp2PowerMode: 0
   psp2AcquireBGM: 1
+  vulkanEnableSetSRGBWrite: 0
+  vulkanUseSWCommandBuffers: 0
   m_SupportedAspectRatios:
     4:3: 1
     5:4: 1
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0
+  bundleVersion: 0.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -138,10 +139,10 @@ PlayerSettings:
     hololens:
       depthFormat: 1
       depthBufferSharingEnabled: 0
-    enable360StereoCapture: 0
     oculus:
       sharedDepthBuffer: 0
       dashSupport: 0
+    enable360StereoCapture: 0
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   m_ColorGamuts: 00000000
@@ -149,7 +150,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.Company.ProductName
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -164,7 +166,7 @@ PlayerSettings:
   CreateWallpaper: 0
   APKExpansionFiles: 0
   keepLoadedShadersAlive: 0
-  StripUnusedMeshComponents: 0
+  StripUnusedMeshComponents: 1
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
   iOSTargetOSVersionString: 8.0
@@ -233,14 +235,16 @@ PlayerSettings:
   appleEnableAutomaticSigning: 0
   iOSRequireARKit: 0
   appleEnableProMotion: 0
-  clonedFromGUID: 00000000000000000000000000000000
-  templatePackageId: 
-  templateDefaultScene: 
-  AndroidTargetArchitectures: 1
+  vulkanEditorSupport: 0
+  clonedFromGUID: 5f34be1353de5cf4398729fda238591b
+  templatePackageId: com.unity.template.2d@1.0.1
+  templateDefaultScene: Assets/Scenes/SampleScene.unity
+  AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
+  AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
@@ -266,6 +270,7 @@ PlayerSettings:
     iPhone: 1
     tvOS: 1
   m_BuildTargetGroupLightmapEncodingQuality: []
+  m_BuildTargetGroupLightmapSettings: []
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -389,6 +394,8 @@ PlayerSettings:
   switchDataLossConfirmation: 0
   switchSupportedNpadStyles: 3
   switchNativeFsCacheSize: 32
+  switchIsHoldTypeHorizontal: 0
+  switchSupportedNpadCount: 8
   switchSocketConfigEnabled: 0
   switchTcpInitialSendBufferSize: 32
   switchTcpInitialReceiveBufferSize: 64
@@ -450,7 +457,7 @@ PlayerSettings:
   ps4ReprojectionSupport: 0
   ps4UseAudio3dBackend: 0
   ps4SocialScreenEnabled: 0
-  ps4ScriptOptimizationLevel: 2
+  ps4ScriptOptimizationLevel: 0
   ps4Audio3dVirtualSpeakerCount: 14
   ps4attribCpuUsage: 0
   ps4PatchPkgPath: 
@@ -514,14 +521,14 @@ PlayerSettings:
   psp2UseLibLocation: 0
   psp2InfoBarOnStartup: 0
   psp2InfoBarColor: 0
-  psp2ScriptOptimizationLevel: 2
+  psp2ScriptOptimizationLevel: 0
   splashScreenBackgroundSourceLandscape: {fileID: 0}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   spritePackerPolicy: 
   webGLMemorySize: 256
   webGLExceptionSupport: 1
   webGLNameFilesAsHashes: 0
-  webGLDataCaching: 0
+  webGLDataCaching: 1
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
@@ -529,7 +536,7 @@ PlayerSettings:
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 1
-  webGLLinkerTarget: 0
+  webGLLinkerTarget: 1
   scriptingDefineSymbols: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -541,17 +548,16 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: corecraftrpg2
+  metroPackageName: Template_2D
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: corecraftrpg2
+  metroApplicationDescription: Template_2D
   wsaImages: {}
   metroTileShortName: 
-  metroCommandLineArgsFile: 
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -567,14 +573,6 @@ PlayerSettings:
   metroFTAFileTypes: []
   metroProtocolName: 
   metroCompilationOverrides: 1
-  tizenProductDescription: 
-  tizenProductURL: 
-  tizenSigningProfileName: 
-  tizenGPSPermissions: 0
-  tizenMicrophonePermissions: 0
-  tizenDeploymentTarget: 
-  tizenDeploymentTargetType: -1
-  tizenMinOSVersion: 1
   n3dsUseExtSaveData: 0
   n3dsCompressStaticMem: 1
   n3dsExtSaveDataNumber: 0x12345
@@ -595,6 +593,7 @@ PlayerSettings:
   XboxOneGameOsOverridePath: 
   XboxOnePackagingOverridePath: 
   XboxOneAppManifestOverridePath: 
+  XboxOneVersion: 1.0.0.0
   XboxOnePackageEncryption: 0
   XboxOnePackageUpdateGranularity: 2
   XboxOneDescription: 
@@ -614,12 +613,13 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
-  facebookSdkVersion: 
+  cloudServicesEnabled:
+    UNet: 1
+  facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 886e002c-f8f2-4410-a931-dd2c9e45c560
+  projectName: CoreCraftRpg
+  organizationId: loopywolf
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

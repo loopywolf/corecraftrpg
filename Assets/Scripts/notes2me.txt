@@ -1,0 +1,10 @@
+NEED/HAVE Map:
+- little man ** HAVE
+- movement and input WSAD ** HAVE
+- items u pick up ** HAVE
+- map with collision ** HAVE
+- inventory GUI
+- monsters
+- shooting
+
+I want to make sure GitHub is hooked up to the correct project
