@@ -1,0 +1,9 @@
+﻿What is Needed:
+---------------
+- a little man - HAVE
+- movement and input - HAVE
+- items u pick up - HAVE
+- map with collision - HAVE
+- inventory GUI
+- monsters
+- shooting
