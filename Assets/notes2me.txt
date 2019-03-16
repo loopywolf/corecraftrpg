@@ -6,4 +6,4 @@
 - map with collision - HAVE
 - inventory GUI
 - monsters
-- shooting
+- shooting - WIP
