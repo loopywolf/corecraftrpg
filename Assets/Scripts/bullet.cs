@@ -19,12 +19,14 @@ public class bullet : MonoBehaviour
     {
         Debug.Log("bulletHit "+hitInfo.name);
         GameObject he = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        /* if(he!=null)
-        {
-            Animation a = he.GetComponent<Animation>();
-            Destroy(he, a.clip.length);
-            Debug.Log("should die after animation");
-        }//if */
+        // I want to trigger the bullet to die after the animation
+        if(he!=null) {
+            Animator a = he.GetComponent<Animator>();
+            AnimatorClipInfo[] aci = a.GetCurrentAnimatorClipInfo(0);    
+            Debug.Log("hi!" + aci[0].clip.length);
+            //a.clip.length);
+            Destroy(he, aci[0].clip.length);
+        }//if
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         if(enemy!=null)
         {

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Effect : MonoBehaviour
 {
-    public Animation a;
-
-    public void selfDestruct()
+    public void setSelfDestruct()
     {
-        Destroy(gameObject, a.clip.length);
-        Debug.Log("I die.");
+        Animator my_animator = GetComponent<Animator>();
+        AnimatorClipInfo[] aci = my_animator.GetCurrentAnimatorClipInfo(0);
+        Debug.Log("I'm self destructing! " + aci[0].clip.length);
+        //a.clip.length);
+        Destroy(gameObject, aci[0].clip.length);
     }//F
 
 }//class

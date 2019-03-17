@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public int health = 100;
 
-    public GameObject deathEffect;  // I don't have one =(
+    public GameObject deathEffect;  // I don't have one - oh yes I do!
 
     public void takeDamage(int damage)
     {
@@ -19,7 +19,8 @@ public class Enemy : MonoBehaviour
     
     void Die()
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        GameObject de = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        de.GetComponent<Effect>().setSelfDestruct();
         Destroy(gameObject);
     }//F
 
