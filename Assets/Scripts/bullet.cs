@@ -18,7 +18,8 @@ public class bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Debug.Log("bulletHit "+hitInfo.name);
-        GameObject he = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        
+        /*GameObject he = Instantiate(hitEffect, transform.position, Quaternion.identity);
         // I want to trigger the bullet to die after the animation
         if(he!=null) {
             Animator a = he.GetComponent<Animator>();
@@ -26,7 +27,11 @@ public class bullet : MonoBehaviour
             Debug.Log("hi!" + aci[0].clip.length);
             //a.clip.length);
             Destroy(he, aci[0].clip.length);
-        }//if
+        }//if */
+
+        GameObject he = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        he.GetComponent<Effect>().setSelfDestruct();
+
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         if(enemy!=null)
         {
