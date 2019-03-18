@@ -8,11 +8,13 @@ public class bullet : MonoBehaviour
     public Rigidbody2D rb;
     public int damage = 40;
     public GameObject hitEffect;
+    public Sprite[] allBulletTypes;
 
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.right * speed;
+        Debug.Log("size is " + allBulletTypes.Length);
     }//Start
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
@@ -39,5 +41,12 @@ public class bullet : MonoBehaviour
         }//if
         Destroy(gameObject);
     }//OnTriggerEnter2D
+
+    public void setSprite(int n)
+    {
+        //GetComponent(SpriteRenderer).sprite = newSprite;
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.sprite = allBulletTypes[n];
+    }//F
 
 }//class

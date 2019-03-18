@@ -19,7 +19,9 @@ public class Weapon : MonoBehaviour
     void Shoot()
     {
         //shooting logic
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bp = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet bScript = bp.GetComponent<bullet>();
+        bScript.setSprite(1);
     }//F
 
 }//class
