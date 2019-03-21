@@ -6,5 +6,12 @@ NEED/HAVE Map:
 - inventory GUI
 - monsters
 - shooting
+-- fire a bullet HAVE
+-- bullet explodes HAVE
+-- damages bad guy HAVE
+-- destroys bad guy HAVE
+-- explosion of bad guy HAVE
+-- crosshair
+- switch to TilEd
 
 I want to make sure GitHub is hooked up to the correct project
