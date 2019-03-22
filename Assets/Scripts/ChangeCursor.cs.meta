@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 28e188e191e88674892fd5f91fde406c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cursorTexture: {fileID: 2800000, guid: 278ebecd7b11ec044b0d24917efaa75a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
